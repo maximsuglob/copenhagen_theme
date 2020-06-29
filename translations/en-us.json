@@ -65,5 +65,7 @@
   "follow_topic_description": "Users can follow a specific topic",
   "navigation_menu_description": "Show navigation menu",
   "navigation_menu_label": "Show navigation menu",
-  "footer_text_group": "Customize footer content"
+  "footer_text_group": "Customize footer content",
+  "footer_copyright_description": "Customize copyright text",
+  "footer_copyright_label": "Customize copyright text"
 }
