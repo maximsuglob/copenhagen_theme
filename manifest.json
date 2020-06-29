@@ -1,7 +1,7 @@
 {
   "name": "Copenhagen-Solbeg",
   "author": "Zendesk",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -277,6 +277,13 @@
     {
       "label": "article_page_group_label",
       "variables": [
+        {
+          "identifier": "show_navigation_menu",
+          "type": "checkbox",
+          "description": "navigation_menu_description",
+          "label": "navigation_menu_label",
+          "value": true
+        },
         {
           "identifier": "show_article_author",
           "type": "checkbox",
