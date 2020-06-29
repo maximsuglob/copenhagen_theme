@@ -1,7 +1,7 @@
 {
   "name": "Copenhagen-Solbeg",
   "author": "Zendesk",
-  "version": "2.3.4",
+  "version": "2.3.6",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -368,6 +368,18 @@
           "description": "follow_topic_description",
           "label": "follow_topic_label",
           "value": true
+        }
+      ]
+    },
+    {
+      "label": "footer_text_group",
+      "variables": [
+        {
+          "identifier": "copyright",
+          "type": "checkbox",
+          "description": "footer_copyright_description",
+          "label": "footer_copyright_label",
+          "value": "All right reserved"
         }
       ]
     }

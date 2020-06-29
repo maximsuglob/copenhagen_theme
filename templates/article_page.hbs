@@ -1,8 +1,9 @@
 <div class="container-divider"></div>
 <div class="container">
   <div class="content-wrapper">
-
-    <ul class="article-menu"></ul>
+    {{#if settings.show_navigation_menu}}
+      <ul class="article-menu"></ul>
+    {{/if}}
 
     <div class="content">
       <nav class="sub-nav">
