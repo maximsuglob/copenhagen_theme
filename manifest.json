@@ -376,7 +376,7 @@
       "variables": [
         {
           "identifier": "copyright",
-          "type": "checkbox",
+          "type": "text",
           "description": "footer_copyright_description",
           "label": "footer_copyright_label",
           "value": "All right reserved"
