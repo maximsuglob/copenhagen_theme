@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // Key map
   var ENTER = 13;
   var ESCAPE = 27;
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var DOWN = 40;
   var TAB = 9;
 
-  function closest (element, selector) {
+  function closest(element, selector) {
     if (Element.prototype.closest) {
       return element.closest(selector);
     }
@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // social share popups
-  Array.prototype.forEach.call(document.querySelectorAll('.share a'), function(anchor) {
-    anchor.addEventListener('click', function(e) {
+  Array.prototype.forEach.call(document.querySelectorAll('.share a'), function (anchor) {
+    anchor.addEventListener('click', function (e) {
       e.preventDefault();
       window.open(this.href, '', 'height = 500, width = 500');
     });
@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var activeElementId = document.activeElement.getAttribute("id");
     sessionStorage.setItem('returnFocusTo', '#' + activeElementId);
   }
+
   var returnFocusTo = sessionStorage.getItem('returnFocusTo');
   if (returnFocusTo) {
     sessionStorage.removeItem('returnFocusTo');
@@ -63,9 +64,11 @@ document.addEventListener('DOMContentLoaded', function() {
     requestCommentSubmit = document.querySelector('.request-container .comment-container .request-submit-comment');
 
   if (showRequestCommentContainerTrigger) {
-    showRequestCommentContainerTrigger.addEventListener('click', function() {
+    showRequestCommentContainerTrigger.addEventListener('click', function () {
       showRequestCommentContainerTrigger.style.display = 'none';
-      Array.prototype.forEach.call(requestCommentFields, function(e) { e.style.display = 'block'; });
+      Array.prototype.forEach.call(requestCommentFields, function (e) {
+        e.style.display = 'block';
+      });
       requestCommentSubmit.style.display = 'inline-block';
 
       if (commentContainerTextarea) {
@@ -80,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
     requestCommentSubmitButton = document.querySelector('.request-container .comment-container input[type=submit]');
 
   if (requestMarkAsSolvedButton) {
-    requestMarkAsSolvedButton.addEventListener('click', function() {
+    requestMarkAsSolvedButton.addEventListener('click', function () {
       requestMarkAsSolvedCheckbox.setAttribute('checked', true);
       requestCommentSubmitButton.disabled = true;
       this.setAttribute('data-disabled', true);
@@ -93,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var requestCommentTextarea = document.querySelector('.request-container .comment-container textarea');
 
   if (requestCommentTextarea) {
-    requestCommentTextarea.addEventListener('input', function() {
+    requestCommentTextarea.addEventListener('input', function () {
       if (requestCommentTextarea.value === '') {
         if (requestMarkAsSolvedButton) {
           requestMarkAsSolvedButton.innerText = requestMarkAsSolvedButton.getAttribute('data-solve-translation');
@@ -114,8 +117,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Submit requests filter form on status or organization change in the request list page
-  Array.prototype.forEach.call(document.querySelectorAll('#request-status-select, #request-organization-select'), function(el) {
-    el.addEventListener('change', function(e) {
+  Array.prototype.forEach.call(document.querySelectorAll('#request-status-select, #request-organization-select'), function (el) {
+    el.addEventListener('change', function (e) {
       e.stopPropagation();
       saveFocus();
       closest(this, 'form').submit();
@@ -124,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Submit requests filter form on search in the request list page
   var quickSearch = document.querySelector('#quick-search');
-  quickSearch && quickSearch.addEventListener('keyup', function(e) {
+  quickSearch && quickSearch.addEventListener('keyup', function (e) {
     if (e.keyCode === ENTER) {
       e.stopPropagation();
       saveFocus();
@@ -147,13 +150,13 @@ document.addEventListener('DOMContentLoaded', function() {
   var burgerMenu = document.querySelector('.header .menu-button');
   var userMenu = document.querySelector('#user-nav');
 
-  burgerMenu.addEventListener('click', function(e) {
+  burgerMenu.addEventListener('click', function (e) {
     e.stopPropagation();
     toggleNavigation(this, userMenu);
   });
 
 
-  userMenu.addEventListener('keyup', function(e) {
+  userMenu.addEventListener('keyup', function (e) {
     if (e.keyCode === ESCAPE) {
       e.stopPropagation();
       closeNavigation(burgerMenu, this);
@@ -167,14 +170,14 @@ document.addEventListener('DOMContentLoaded', function() {
   // Toggles expanded aria to collapsible elements
   var collapsible = document.querySelectorAll('.collapsible-nav, .collapsible-sidebar');
 
-  Array.prototype.forEach.call(collapsible, function(el) {
+  Array.prototype.forEach.call(collapsible, function (el) {
     var toggle = el.querySelector('.collapsible-nav-toggle, .collapsible-sidebar-toggle');
 
-    el.addEventListener('click', function(e) {
+    el.addEventListener('click', function (e) {
       toggleNavigation(toggle, this);
     });
 
-    el.addEventListener('keyup', function(e) {
+    el.addEventListener('keyup', function (e) {
       if (e.keyCode === ESCAPE) {
         closeNavigation(toggle, this);
       }
@@ -185,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var requestOrganisationSelect = document.querySelector('#request-organization select');
 
   if (requestOrganisationSelect) {
-    requestOrganisationSelect.addEventListener('change', function() {
+    requestOrganisationSelect.addEventListener('change', function () {
       closest(this, 'form').submit();
     });
   }
@@ -197,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (subsectionsList && subsectionsList.children.length > 6) {
     seeAllTrigger.setAttribute("aria-hidden", false);
 
-    seeAllTrigger.addEventListener("click", function(e) {
+    seeAllTrigger.addEventListener("click", function (e) {
       subsectionsList.classList.remove("section-list--collapsed");
       seeAllTrigger.parentNode.removeChild(seeAllTrigger);
     });
@@ -205,18 +208,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // If multibrand search has more than 5 help centers or categories collapse the list
   var multibrandFilterLists = document.querySelectorAll(".multibrand-filter-list");
-  Array.prototype.forEach.call(multibrandFilterLists, function(filter) {
+  Array.prototype.forEach.call(multibrandFilterLists, function (filter) {
     if (filter.children.length > 6) {
       // Display the show more button
       var trigger = filter.querySelector(".see-all-filters");
       trigger.setAttribute("aria-hidden", false);
 
       // Add event handler for click
-      trigger.addEventListener("click", function(e) {
+      trigger.addEventListener("click", function (e) {
         e.stopPropagation();
         trigger.parentNode.removeChild(trigger);
-        filter.classList.remove("multibrand-filter-list--collapsed")
-      })
+        filter.classList.remove("multibrand-filter-list--collapsed");
+      });
     }
   });
 
@@ -231,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Dropdowns
-  
+
   function Dropdown(toggle, menu) {
     this.toggle = toggle;
     this.menu = menu;
@@ -256,21 +259,21 @@ document.addEventListener('DOMContentLoaded', function() {
       return Array.prototype.slice.call(this.menu.querySelectorAll("[role='menuitem']"));
     },
 
-    dismiss: function() {
+    dismiss: function () {
       if (!this.isExpanded) return;
 
       this.menu.setAttribute("aria-expanded", false);
       this.menu.classList.remove("dropdown-menu-end", "dropdown-menu-top");
     },
 
-    open: function() {
+    open: function () {
       if (this.isExpanded) return;
 
       this.menu.setAttribute("aria-expanded", true);
       this.handleOverflow();
     },
 
-    handleOverflow: function() {
+    handleOverflow: function () {
       var rect = this.menu.getBoundingClientRect();
 
       var overflow = {
@@ -287,11 +290,11 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       if (this.menu.getBoundingClientRect().top < 0) {
-        this.menu.classList.remove("dropdown-menu-top")
+        this.menu.classList.remove("dropdown-menu-top");
       }
     },
 
-    focusNextMenuItem: function(currentItem) {
+    focusNextMenuItem: function (currentItem) {
       if (!this.menuItems.length) return;
 
       var currentIndex = this.menuItems.indexOf(currentItem);
@@ -300,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function() {
       this.menuItems[nextIndex].focus();
     },
 
-    focusPreviousMenuItem: function(currentItem) {
+    focusPreviousMenuItem: function (currentItem) {
       if (!this.menuItems.length) return;
 
       var currentIndex = this.menuItems.indexOf(currentItem);
@@ -309,7 +312,7 @@ document.addEventListener('DOMContentLoaded', function() {
       this.menuItems[previousIndex].focus();
     },
 
-    clickHandler: function() {
+    clickHandler: function () {
       if (this.isExpanded) {
         this.dismiss();
       } else {
@@ -317,7 +320,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     },
 
-    toggleKeyHandler: function(e) {
+    toggleKeyHandler: function (e) {
       switch (e.keyCode) {
         case ENTER:
         case SPACE:
@@ -338,7 +341,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     },
 
-    menuKeyHandler: function(e) {
+    menuKeyHandler: function (e) {
       var firstItem = this.menuItems[0];
       var lastItem = this.menuItems[this.menuItems.length - 1];
       var currentElement = e.target;
@@ -378,23 +381,80 @@ document.addEventListener('DOMContentLoaded', function() {
           break;
       }
     }
-  }
+  };
 
   var dropdowns = [];
   var dropdownToggles = Array.prototype.slice.call(document.querySelectorAll(".dropdown-toggle"));
 
-  dropdownToggles.forEach(function(toggle) {
+  dropdownToggles.forEach(function (toggle) {
     var menu = toggle.nextElementSibling;
     if (menu && menu.classList.contains("dropdown-menu")) {
       dropdowns.push(new Dropdown(toggle, menu));
     }
   });
 
-  document.addEventListener("click", function(evt) {
-    dropdowns.forEach(function(dropdown) {
+  document.addEventListener("click", function (evt) {
+    dropdowns.forEach(function (dropdown) {
       if (!dropdown.toggle.contains(evt.target)) {
         dropdown.dismiss();
       }
     });
   });
+//create menu
+  const menu = document.querySelector('.article-menu');
+
+  const loader = '<section class="sk-wave"><div class="sk-rect sk-rect-1"></div><div class="sk-rect sk-rect-2"></div><div class="sk-rect sk-rect-3"></div><div class="sk-rect sk-rect-4"></div><div class="sk-rect sk-rect-5"></div></section>';
+  if (menu) {
+    menu.innerHTML = loader;
+    Promise.all([
+      window.fetch('/api/v2/help_center/en-us/categories.json'),
+      window.fetch('/api/v2/help_center/en-us/sections.json'),
+      window.fetch('/api/v2/help_center/en-us/articles.json')
+    ]).then((responses) => {
+      Promise
+        .all(responses.reduce((acc, resp) => [...acc, resp.json()], []))
+        .then(([categories, sections, articles]) => {
+          //todo remove
+          console.log('categories', categories);
+          console.log('sections', sections);
+          console.log('articles', articles);
+
+          function getArticles(sectionId) {
+            const sectionArticles = articles.articles.filter(item => item.section_id === sectionId && !item.draft);
+            if (sectionArticles.length) {
+              return '<ul class="article-menu__article">' + sectionArticles.map(article =>
+                `<li id=${article.id}><a href="${article.html_url}">${article.title}</a></li>`)
+                .join('') + '</ul>';
+            }
+            return '';
+          }
+
+          function analyseChildSection(parentId, childSections) {
+            const child = childSections.filter(item => item.parent_section_id === parentId);
+            if (child.length) {
+              return '<ul class="article-menu__section-child">' + child.map(section =>
+                `<li id=${section.id}><a href="${section.html_url}">${section.name}</a>${analyseChildSection(section.id, childSections)}${getArticles(section.id)}</li>`)
+                .join('') + '</ul>';
+            }
+            return '';
+          }
+
+          function analyseSection(categoryId) {
+            const categorySections = sections.sections.filter(item => item.category_id === categoryId);
+            const parentSections = categorySections.filter(item => item.parent_section_id === null);
+            const childSections = categorySections.filter(item => item.parent_section_id !== null);
+
+            return '<ul class="article-menu__section">' + parentSections.map(section =>
+              `<li id=${section.id} class="article-menu__section-item"><a href="${section.html_url}">${section.name}</a>${analyseChildSection(section.id, childSections)}${getArticles(section.id)}</li>`)
+              .join('') + '</ul>';
+          }
+
+
+          menu.innerHTML = categories.categories.map(category => {
+            return `<li id=${category.id} class="article-menu__category"><a href="${category.html_url}">${category.name}</a>${analyseSection(category.id)}</li>`;
+          }).join('');
+
+        });
+    });
+  }
 });

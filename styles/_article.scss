@@ -6,13 +6,13 @@
   * 17%     | 66%     | 17%
   */
   @include desktop {
-    flex: 1 0 66%;
-    max-width: 66%;
-    min-width: 640px;
+    //flex: 1 0 66%;
+    //max-width: 66%;
+    //min-width: 640px;
     padding: 0 30px;
   }
 
-  flex: 1 0 auto; //Explicit values needed whith flex-direction: column for IE11
+  //flex: 1 0 auto; //Explicit values needed whith flex-direction: column for IE11
 
   &-container {
     @include desktop {
@@ -23,12 +23,7 @@
     flex-direction: column;
   }
 
-  &-header {
-    @include tablet {
-      flex-direction: row;
-      margin-top: 0;
-    }
-
+  &-header-controls {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
@@ -36,6 +31,10 @@
     justify-content: space-between;
     margin-bottom: 40px;
     margin-top: 20px;
+    @include tablet {
+      flex-direction: row;
+      margin-top: 0;
+    }
   }
 
   &-avatar {

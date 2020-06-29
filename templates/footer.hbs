@@ -7,7 +7,8 @@
         <div class="dropdown language-selector">
           <button class="dropdown-toggle" aria-haspopup="true">
             {{current_locale.name}}
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12"
+                 class="dropdown-chevron-icon">
               <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
             </svg>
           </button>
@@ -23,3 +24,73 @@
     </div>
   </div>
 </footer>
+<script>
+//   const menu = document.querySelector('.article-menu');
+// menu.innerHTML='<section class="sk-wave"><div class="sk-rect sk-rect-1"></div><div class="sk-rect sk-rect-2"></div><div class="sk-rect sk-rect-3"></div><div class="sk-rect sk-rect-4"></div><div class="sk-rect sk-rect-5"></div></section>'
+//   Promise.all([
+//     window.fetch('/api/v2/help_center/en-us/categories.json'),
+//     window.fetch('/api/v2/help_center/en-us/sections.json'),
+//     window.fetch('/api/v2/help_center/en-us/articles.json')
+//   ]).then((responses) => {
+//     Promise
+//             .all(responses.reduce((acc, resp) => [...acc, resp.json()], []))
+//             .then(([categories, sections, articles]) => {
+//               console.log('categories', categories);
+//               console.log('sections', sections);
+//               console.log('articles', articles);
+//
+//               function getArticles(sectionId) {
+//                const sectionArticles = articles.articles.filter(item => item.section_id === sectionId && !item.draft);
+//                 if(sectionArticles.length){
+//                   return '<ul>' + sectionArticles.map(article =>
+//                           `<li id=${article.id}><a href="${article.html_url}">${article.title}</a></li>`)
+//                           .join('') + '</ul>';
+//                 }
+//                 return '';
+//               }
+//
+//               function analyseChildSection(parentId, childSections) {
+//                 const child = childSections.filter(item => item.parent_section_id === parentId);
+//                 if (child.length) {
+//                   return '<ul>' + child.map(section =>
+//                           `<li id=${section.id}><a href="${section.html_url}">${section.name}</a>${analyseChildSection(section.id, childSections)}${getArticles(section.id)}</li>`)
+//                           .join('') + '</ul>';
+//                 }
+//                 return '';
+//               }
+//
+//               function analyseSection(categoryId) {
+//                 const categorySections = sections.sections.filter(item => item.category_id === categoryId);
+//                 const parentSections = categorySections.filter(item => item.parent_section_id === null);
+//                 const childSections = categorySections.filter(item => item.parent_section_id !== null);
+//
+//                 return '<ul>' + parentSections.map(section =>
+//                         `<li id=${section.id}><a href="${section.html_url}">${section.name}</a>${analyseChildSection(section.id, childSections)}${getArticles(section.id)}</li>`)
+//                         .join('') + '</ul>';
+//               }
+//
+//
+//               menu.innerHTML = categories.categories.map(category => {
+//                 return `<li id=${category.id}><a href="${category.html_url}">${category.name}</a>${analyseSection(category.id)}</li>`;
+//               }).join('');
+//
+//             });
+//   });
+  // window.fetch('/api/v2/help_center/en-us/categories.json').then(categories => {
+  //   categories.json().then(categories => {
+  //             console.log(categories);
+  //             categoriesList = [...categories.categories];
+  //             //get sections
+  //             Promise.all(categoriesList.reduce((acc, category) => {
+  //               return [...acc, window.fetch(`/api/v2/help_center/en-us/categories/${category.id}/sections.json`)];
+  //             }, [])).then(sections => {
+  //               console.log(sections);
+  //               Promise.all(sections.reduce((acc, section) => {
+  //                 return [...acc, section.json()];
+  //               }, [])).then(sectionsList => console.log(sectionsList));
+  //             });
+  //           }
+  //   );
+  // });
+
+</script>

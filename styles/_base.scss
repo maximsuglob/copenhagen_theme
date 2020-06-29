@@ -59,7 +59,7 @@ input {
 
   &:not([type="checkbox"]) {
     outline: none;
-    
+
     &:focus {
       border: 1px solid $brand_color;
     }
@@ -125,4 +125,16 @@ ul {
 
 .visibility-hidden {
   @include visually-hidden;
+}
+
+.content-wrapper{
+  display: flex;
+
+  .article-menu{
+    width: 20%;
+    margin-right: 20px;
+  }
+  .content{
+    flex: 1 1 auto;
+  }
 }
