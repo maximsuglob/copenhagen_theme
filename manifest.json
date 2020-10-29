@@ -271,6 +271,13 @@
           "description": "recent_activity_description",
           "label": "recent_activity_label",
           "value": true
+        },
+        {
+          "identifier": "status_category",
+          "type": "text",
+          "description": "status_category_description",
+          "label": "status_category_label",
+          "value": ""
         }
       ]
     },
