@@ -1288,6 +1288,21 @@ ul {
   border: 1px solid #555;
 }
 
+.container__status ul {
+  width: 30%;
+}
+
+.container__status ul li {
+  width: 33%;
+  padding: 10px;
+}
+
+.container__status ul:first-child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 /***** Recent activity *****/
 .recent-activity-header {
   margin-bottom: 10px;

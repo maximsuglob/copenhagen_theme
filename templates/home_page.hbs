@@ -46,12 +46,7 @@
           {{#is name ../settings.status_category}}
             <ul>
               {{#each sections}}
-                {{#is name ../../settings.additional_statuses}}
-                  {{name}}
-                  {{#each articles}}
-                    <li><a href="{{url}}">{{title}}</a></li>
-                  {{/each}}
-                {{/is}}
+                <li><a href="{{url}}">{{name}}</a></li>
               {{/each}}
             </ul>
             <ul>

@@ -86,6 +86,18 @@
   &__status{
     display: flex;
     justify-content: space-between;
-    border: 1px solid #555
+    border: 1px solid #555;
+    ul{
+      width: 30%;
+      li{
+        width: 33%;
+        padding: 10px;
+      }
+    }
+    ul:first-child{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
 }
