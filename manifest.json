@@ -292,13 +292,6 @@
           "description": "service_notifications_description",
           "label": "service_notifications_label",
           "value": "Service notification"
-        },
-        {
-          "identifier": "additional_statuses",
-          "type": "text",
-          "description": "additional_statuses_description",
-          "label": "additional_statuses_label",
-          "value": "Additional statuses"
         }
       ]
     },
