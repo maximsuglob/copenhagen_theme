@@ -277,7 +277,7 @@
           "type": "text",
           "description": "status_category_description",
           "label": "status_category_label",
-          "value": ""
+          "value": "Status"
         }
       ]
     },

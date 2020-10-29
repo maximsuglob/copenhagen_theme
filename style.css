@@ -1282,6 +1282,20 @@ ul {
   padding: 30px 0;
 }
 
+.container {
+  flex: 1 1 auto;
+}
+
+.container__wrapper {
+  display: flex;
+}
+
+.container__status {
+  min-width: 200px;
+  padding: 20px;
+  border: 1px solid #555;
+}
+
 /***** Recent activity *****/
 .recent-activity-header {
   margin-bottom: 10px;
