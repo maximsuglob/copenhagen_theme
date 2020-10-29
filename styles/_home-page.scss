@@ -83,14 +83,9 @@
 }
 
 .container {
-  flex: 1 1 auto;
-
-  &__wrapper {
-    display: flex;
-  }
   &__status{
-    min-width: 200px;
-    padding: 20px;
+    display: flex;
+    justify-content: space-between;
     border: 1px solid #555
   }
 }

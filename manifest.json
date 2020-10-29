@@ -1,7 +1,7 @@
 {
   "name": "Copenhagen",
   "author": "Zendesk",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -278,6 +278,27 @@
           "description": "status_category_description",
           "label": "status_category_label",
           "value": "Status"
+        },
+        {
+          "identifier": "release_notes",
+          "type": "text",
+          "description": "release_notes_description",
+          "label": "release_notes_label",
+          "value": "Release notes"
+        },
+        {
+          "identifier": "service_notification",
+          "type": "text",
+          "description": "service_notifications_description",
+          "label": "service_notifications_label",
+          "value": "Service notification"
+        },
+        {
+          "identifier": "additional_statuses",
+          "type": "text",
+          "description": "additional_statuses_description",
+          "label": "additional_statuses_label",
+          "value": "Additional statuses"
         }
       ]
     },
