@@ -1,7 +1,7 @@
 {
   "name": "Copenhagen",
   "author": "Zendesk",
-  "version": "2.3.4",
+  "version": "2.3.5",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -320,6 +320,60 @@
           "description": "additional_section_slot3_section_description",
           "label": "additional_section_slot3_section_label",
           "value": "Release notes"
+        }
+      ]
+    },
+    {
+      "label": "home_page_links_group",
+      "variables": [
+        {
+          "identifier": "show_links_group",
+          "type": "checkbox",
+          "description": "links_group_description",
+          "label": "links_group_label",
+          "value": true
+        },
+        {
+          "identifier": "link1_url",
+          "type": "text",
+          "description": "link1_url_description",
+          "label": "link1_url_label",
+          "value": "1"
+        },
+        {
+          "identifier": "link1_text",
+          "type": "text",
+          "description": "link1_text_description",
+          "label": "link1_text_label",
+          "value": "1"
+        },
+        {
+          "identifier": "link2_url",
+          "type": "text",
+          "description": "link2_url_description",
+          "label": "link2_url_label",
+          "value": "2"
+        },
+        {
+          "identifier": "link2_text",
+          "type": "text",
+          "description": "link2_text_description",
+          "label": "link2_text_label",
+          "value": "2"
+        },
+        {
+          "identifier": "link3_url",
+          "type": "text",
+          "description": "link3_url_description",
+          "label": "link3_url_label",
+          "value": ""
+        },
+        {
+          "identifier": "link3_text",
+          "type": "text",
+          "description": "link3_text_description",
+          "label": "link3_text_label",
+          "value": ""
         }
       ]
     },

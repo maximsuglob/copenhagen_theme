@@ -1313,6 +1313,16 @@ ul {
   font-weight: 600;
 }
 
+.application-links {
+  margin-top: 40px;
+}
+
+.application-links h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
 /***** Recent activity *****/
 .recent-activity-header {
   margin-bottom: 10px;
