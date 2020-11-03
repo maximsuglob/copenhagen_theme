@@ -52,6 +52,22 @@
   "additional_section_slot3_category_label": "Slot 3 label",
   "additional_section_slot3_section_description": "Slot 3 description",
   "additional_section_slot3_section_label": "Slot 3 label",
+  "home_page_links_group": "Links section",
+  "links_group_description": "Show links section",
+  "links_group_label": "Show links section",
+  "link1_url_description": "link1 url",
+  "link1_url_label": "link1 url",
+  "link1_text_description": "link1 content",
+  "link1_text_label": "link1 content",
+  "link2_url_description": "link2 url",
+  "link2_url_label": "link2 url",
+  "link2_text_description": "link2 content",
+  "link2_text_label": "link2 content",
+  "link3_url_description": "link3 url",
+  "link3_url_label": "link3 url",
+  "link3_text_description": "link3 content",
+  "link3_text_label": "link3 content",
+
 
 
   "article_page_group_label": "Article page elements",
