@@ -280,11 +280,11 @@
           "value": true
         },
         {
-          "identifier": "additional_section_slot_category",
+          "identifier": "additional_section_slot1_category",
           "type": "text",
           "description": "additional_section_slot1_category_description",
           "label": "additional_section_slot1_category_label",
-          "value": ""
+          "value": "11111111111"
         },
         {
           "identifier": "additional_section_slot1_section",
