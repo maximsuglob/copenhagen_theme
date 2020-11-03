@@ -1,7 +1,7 @@
 {
   "name": "Copenhagen",
   "author": "Zendesk",
-  "version": "2.3.8",
+  "version": "2.3.9",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -280,17 +280,17 @@
           "value": true
         },
         {
-          "identifier": "additional_section_slot1_category",
+          "identifier": "slot1_category",
           "type": "text",
-          "description": "additional_section_slot1_category_description",
-          "label": "additional_section_slot1_category_label",
-          "value": "11111111111"
+          "description": "slot1_category_description",
+          "label": "slot1_category_label",
+          "value": ""
         },
         {
-          "identifier": "additional_section_slot1_section",
+          "identifier": "slot1_section",
           "type": "text",
-          "description": "additional_section_slot1_section_description",
-          "label": "additional_section_slot1_section_label",
+          "description": "slot1_section_description",
+          "label": "slot1_section_label",
           "value": ""
         },
         {
