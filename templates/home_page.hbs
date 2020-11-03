@@ -43,7 +43,7 @@
     {{#if settings.show_additional_section}}
       <div class="container__status">
         {{#each categories}}
-          {{#is name ../settings.additional_section_slot1_category}}
+          {{#is name ../settings.additional_section_slot_category}}
             {{#if ../settings.additional_section_slot1_section}}
               <ul class="additional-section slot1">
                 {{#each sections}}
@@ -109,7 +109,34 @@
         {{/each}}
       </div>
     {{/if}}
-
+    {{#if settings.show_links_group}}
+      <section class="application-links">
+        <h2>Other products</h2>
+        <ul class="blocks-list">
+          {{#if settings.link1_url}}
+            <li class="blocks-item">
+              <a href='{{settings.link1_url}}' class="blocks-item-link">
+                <span class="blocks-item-title">{{settings.link1_text}}</span>
+              </a>
+            </li>
+          {{/if}}
+          {{#if settings.link2_url}}
+            <li class="blocks-item">
+              <a href='{{settings.link2_url}}' class="blocks-item-link">
+                <span class="blocks-item-title">{{settings.link2_text}}</span>
+              </a>
+            </li>
+          {{/if}}
+          {{#if settings.link3_url}}
+            <li class="blocks-item">
+              <a href='{{settings.link3_url}}' class="blocks-item-link">
+                <span class="blocks-item-title">{{settings.link3_text}}</span>
+              </a>
+            </li>
+          {{/if}}
+        </ul>
+      </section>
+    {{/if}}
     {{#if promoted_articles}}
       <section class="articles">
         <h2>{{t 'promoted_articles'}}</h2>
