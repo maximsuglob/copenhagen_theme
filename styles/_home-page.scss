@@ -83,21 +83,33 @@
 }
 
 .container {
-  &__status{
+  &__status {
     display: flex;
     justify-content: space-between;
-    border: 1px solid #555;
-    ul{
-      width: 30%;
-      li{
-        width: 33%;
-        padding: 10px;
+
+    .additional-section {
+      flex: 1 1 auto;
+
+      li {
+        padding: 10px 10px 10px 0;
       }
     }
-    ul:first-child{
+
+    .slot1 {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+
+      li {
+        width: 33%;
+        font-size: 16px;
+        padding-top: 0;
+        padding-bottom: 20px;
+        a {
+          color: $text_color;
+          font-weight: 600;
+        }
+      }
     }
   }
 }
