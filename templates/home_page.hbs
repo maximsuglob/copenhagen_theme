@@ -42,71 +42,7 @@
     </section>
     {{#if settings.show_additional_section}}
       <div class="container__status">
-        {{#each categories}}
-          {{#is name ../settings.additional_section_slot1_category}}
-            {{#if ../settings.additional_section_slot1_section}}
-              <ul class="additional-section slot1">
-                {{#each sections}}
-                  {{#is name ../../settings.additional_section_slot1_section}}
-                    <h3>{{name}}</h3>
-                    {{#each articles}}
-                      <li><a href="{{url}}">{{title}}</a></li>
-                    {{/each}}
-                  {{/is}}
-                {{/each}}
-              </ul>
-            {{else}}
-              <ul class="additional-section slot1">
-                {{#each sections}}
-                  <li><a href="{{url}}">{{name}}</a></li>
-                {{/each}}
-              </ul>
-            {{/if}}
-          {{/is}}
-          {{#is name ../settings.additional_section_slot2_category}}
-            {{#if ../settings.additional_section_slot2_section}}
-              <ul class="additional-section slot2">
-                {{#each sections}}
-                  {{#is name ../../settings.additional_section_slot2_section}}
-                    <h3>{{name}}</h3>
 
-                    {{#each articles}}
-                      <li><a href="{{url}}">{{title}}</a></li>
-                    {{/each}}
-                  {{/is}}
-                {{/each}}
-              </ul>
-            {{else}}
-              <ul class="additional-section slot2">
-                {{#each sections}}
-                  <li><a href="{{url}}">{{name}}</a></li>
-                {{/each}}
-              </ul>
-            {{/if}}
-          {{/is}}
-          {{#is name ../settings.additional_section_slot3_category}}
-            {{#if ../settings.additional_section_slot3_section}}
-              <ul class="additional-section slot3">
-                {{#each sections}}
-                  {{#is name ../../settings.additional_section_slot3_section}}
-                    <h3>{{name}}</h3>
-
-                    {{#each articles}}
-                      <li><a href="{{url}}">{{title}}</a></li>
-                    {{/each}}
-                  {{/is}}
-                {{/each}}
-              </ul>
-            {{else}}
-              <ul class="additional-section slot3">
-                {{#each sections}}
-                  <li><a href="{{url}}">{{name}}</a></li>
-                {{/each}}
-              </ul>
-            {{/if}}
-          {{/is}}
-
-        {{/each}}
       </div>
     {{/if}}
     {{#if settings.show_links_group}}
