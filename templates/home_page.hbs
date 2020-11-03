@@ -63,11 +63,11 @@
               </ul>
             {{/if}}
           {{/is}}
-          {{#is name ../settings.additional_section_slot2_category}}
-            {{#if ../settings.additional_section_slot2_section}}
+          {{#is name ../settings.slot2_category}}
+            {{#if ../settings.slot2_section}}
               <ul class="additional-section slot2">
                 {{#each sections}}
-                  {{#is name ../../settings.additional_section_slot2_section}}
+                  {{#is name ../../settings.slot2_section}}
                     <h3>{{name}}</h3>
 
                     {{#each articles}}
@@ -84,11 +84,11 @@
               </ul>
             {{/if}}
           {{/is}}
-          {{#is name ../settings.additional_section_slot3_category}}
-            {{#if ../settings.additional_section_slot3_section}}
+          {{#is name ../settings.slot3_category}}
+            {{#if ../settings.slot3_section}}
               <ul class="additional-section slot3">
                 {{#each sections}}
-                  {{#is name ../../settings.additional_section_slot3_section}}
+                  {{#is name ../../settings.slot3_section}}
                     <h3>{{name}}</h3>
 
                     {{#each articles}}

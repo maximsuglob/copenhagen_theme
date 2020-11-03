@@ -1,7 +1,7 @@
 {
   "name": "Copenhagen",
   "author": "Zendesk",
-  "version": "2.3.9",
+  "version": "2.3.10",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -294,31 +294,31 @@
           "value": ""
         },
         {
-          "identifier": "additional_section_slot2_category",
+          "identifier": "slot2_category",
           "type": "text",
-          "description": "additional_section_slot2_category_description",
-          "label": "additional_section_slot2_category_label",
+          "description": "slot2_category_description",
+          "label": "slot2_category_label",
           "value": ""
         },
         {
-          "identifier": "additional_section_slot2_section",
+          "identifier": "slot2_section",
           "type": "text",
-          "description": "additional_section_slot2_section_description",
-          "label": "additional_section_slot2_section_label",
+          "description": "slot2_section_description",
+          "label": "slot2_section_label",
           "value": ""
         },
         {
-          "identifier": "additional_section_slot3_category",
+          "identifier": "slot3_category",
           "type": "text",
-          "description": "additional_section_slot3_category_description",
-          "label": "additional_section_slot3_category_label",
+          "description": "slot3_category_description",
+          "label": "slot3_category_label",
           "value": ""
         },
         {
-          "identifier": "additional_section_slot3_section",
+          "identifier": "slot3_section",
           "type": "text",
-          "description": "additional_section_slot3_section_description",
-          "label": "additional_section_slot3_section_label",
+          "description": "slot3_section_description",
+          "label": "slot3_section_label",
           "value": ""
         }
       ]
