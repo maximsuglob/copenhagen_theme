@@ -1,0 +1,19 @@
+.article-menu{
+  &__category{
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  &__section{
+    margin-left: 10px;
+    &-item{
+
+    }
+    &-child{
+      margin-left: 10px;
+    }
+  }
+  &__article{
+    margin-left: 10px;
+    text-transform: none;
+  }
+}
