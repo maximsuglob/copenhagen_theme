@@ -46,6 +46,8 @@
           {{#if ../settings.slot1_category}}
             {{#if ../settings.slot1_section}}
               <ul class="additional-section slot1">
+              {{#is name ../settings.slot1_category}}
+
                 {{#each sections}}
                   {{#is name ../../settings.slot1_section}}
                     <h3>{{name}}</h3>
@@ -54,6 +56,7 @@
                     {{/each}}
                   {{/is}}
                 {{/each}}
+              {{/is}}
               </ul>
             {{else}}
               <ul class="additional-section slot1">
