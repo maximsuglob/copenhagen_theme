@@ -43,7 +43,7 @@
     {{#if settings.show_additional_section}}
       <div class="container__status">
         {{#each categories}}
-          {{#is name ../settings.slot1_category}}
+          {{#if ../settings.slot1_category}}
             {{#if ../settings.slot1_section}}
               <ul class="additional-section slot1">
                 {{#each sections}}
@@ -62,7 +62,7 @@
                 {{/each}}
               </ul>
             {{/if}}
-          {{/is}}
+          {{/if}}
           {{#is name ../settings.slot2_category}}
             {{#if ../settings.slot2_section}}
               <ul class="additional-section slot2">
